@@ -1,6 +1,6 @@
-package oop_auto;
+package JavaSampleOOP;
 
-public class OOP_Auto {
+public class JavaSampleOOP_Cars {
     
 
     /**
@@ -8,38 +8,37 @@ public class OOP_Auto {
      */
     public static void main(String[] args) {
         // Sammlung von Auto-Objekten, gesammelt in einer ArrayList
-        Auto[] autoSammlung = bauMalEinPaarAutos();
+        Car[] carCollection = buildAFewCars();
         
-        for(int i=0; i<autoSammlung.length; i++) {
-            System.out.println(autoSammlung[i].printMe());
+        for(int i=0; i<carCollection.length; i++) {
+            System.out.println(carCollection[i].printMe());
         }
         System.out.println("------------------------------------------------");
         
         
-        autoSammlung[0].drive(10.0);
-        autoSammlung[1].tanken(150.00);
-        if(autoSammlung[1].tanken(150.00)) {
-            System.out.println("Tanken hat geklappt.\n");
+        carCollection[0].drive(10.0);
+        if(carCollection[1].refuel(150.00)) {
+            System.out.println("tanking up was successful\n");
         } else {
-            System.out.println("Tanken hat nicht geklappt.\n");
+            System.out.println("tanking up failed (volume exceeded)\n");
         }
         
-        for(int i=0; i<autoSammlung.length; i++) {
-            System.out.println(autoSammlung[i].printMe());
+        for(int i=0; i<carCollection.length; i++) {
+            System.out.println(carCollection[i].printMe());
         }
     }
     
     
-    private static Auto[] bauMalEinPaarAutos() {
-        Auto[] array = {
-            new Auto(
+    private static Car[] buildAFewCars() {
+        Car[] array = {
+            new Car(
                     "Renault Twingo",   // Bezeichnung
                     "violet",          // Farbe
                     6.0,                // durchschnittlicher Verbrauch (l/100km)
                     195625.0,           // kmStand
                     38.5                // Tankvolumen
             ),
-            new Auto(
+            new Car(
                     "Audi A6",
                     "darkblue",
                     8.0,
