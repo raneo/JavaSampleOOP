@@ -16,12 +16,13 @@ public class JavaSampleOOP_Cars {
         System.out.println("------------------------------------------------");
         
         
-        carCollection[0].drive(10.0);
-        if(carCollection[1].refuel(150.00)) {
+        
+        if(carCollection[1].refuel(20.0)) {
             System.out.println("tanking up was successful\n");
         } else {
             System.out.println("tanking up failed (volume exceeded)\n");
         }
+        carCollection[1].drive(100.0);
         
         for(int i=0; i<carCollection.length; i++) {
             System.out.println(carCollection[i].printMe());

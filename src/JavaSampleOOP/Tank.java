@@ -30,6 +30,15 @@ public class Tank {
         return ok;
     }
     
+    public Boolean drain(Double drainedLiters) {
+        if (drainedLiters > this.level) {
+            return false;
+        } else {
+            setLevel(this.level - drainedLiters);
+            return true;
+        }
+    }
+    
     private void setLevel(Double newLevel) {
         this.level = newLevel;
         this.levelPercent = (int) Math.round(

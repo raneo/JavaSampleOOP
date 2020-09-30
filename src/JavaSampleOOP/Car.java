@@ -22,7 +22,13 @@ public class Car {
         
     public Boolean drive(Double km) {
         if (km > 0) {
-            this.mileage = this.mileage + km;
+            for (int i=0; i<km; i++){
+                // try to drain tank contents after every single kilometer
+                if (!this.tank.drain(this.consumption/100)) {
+                    break;
+                }
+                this.mileage = this.mileage + 1.0;
+            }
             return true;
         } else {
             return false;
