@@ -1,6 +1,6 @@
-package oop_auto;
+package JavaSampleOOP;
 
-public class Auto {
+public class Car {
     
     // static attributes
     private String name;
@@ -11,7 +11,7 @@ public class Auto {
     private boolean isEngineOn;
     private Tank tank;
 
-    Auto(String name, String color, Double consumption, Double mileage, Double tankVolume) {
+    Car(String name, String color, Double consumption, Double mileage, Double tankVolume) {
         this.name = name;
         this.color = color;
         this.consumption = consumption;
@@ -29,21 +29,21 @@ public class Auto {
         }
     }
         
-    public Boolean vollTanken() {
+    public Boolean refuel() {
         return this.tank.refuel();
     }
     
-    public Boolean tanken(Double liter){
+    public Boolean refuel(Double liter){
         return this.tank.refuel(liter); 
     }
     
-    public void setKmStand(Double mileage) {   
+    public void setMileage(Double mileage) {   
         if (mileage > 0){
             this.mileage = mileage;
         }        
     }
     
-    public double getKmStand(){
+    public double getMileage(){
         return this.mileage;
     }
     

@@ -1,4 +1,4 @@
-package oop_auto;
+package JavaSampleOOP;
 
 public class Tank {
     
@@ -19,7 +19,10 @@ public class Tank {
     public Boolean refuel(Double liter) {
         Boolean ok = false;
         if (liter > this.volumen - this.level) {
+            /*
+            fill up completely
             this.setLevel(this.volumen);
+            */
         } else {
             this.setLevel(this.level + liter);
             ok = true;
