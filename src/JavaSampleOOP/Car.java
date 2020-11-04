@@ -120,6 +120,7 @@ public class Car {
     public boolean getIsEngineOn() {
         return this.isEngineOn;
     }
+<<<<<<< Updated upstream
     
     public String getTankContents() {
         return (
@@ -128,4 +129,12 @@ public class Car {
                 this.tank.getVolume() + ")"
                 );
     }    
+=======
+    public void crashCar()
+    {
+        this.color = "abgeranzt";
+        this.isEngineOn = false;
+        this.tank.drainTank();
+    }
+>>>>>>> Stashed changes
 }

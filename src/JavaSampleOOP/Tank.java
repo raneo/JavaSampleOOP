@@ -10,9 +10,20 @@ public class Tank {
         this.volume = volume;
         this.setLevel(0.0);
     }
+<<<<<<< Updated upstream
     
     public Boolean refuel() {
         this.setLevel(this.volume);
+=======
+
+    public void drainTank() {
+        this.level = .0;
+        this.levelPercent = 0;
+    }
+    
+    public Boolean refuel(){
+        this.setLevel(this.volumen);
+>>>>>>> Stashed changes
         return true;
     }
     
