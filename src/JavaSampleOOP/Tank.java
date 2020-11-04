@@ -2,23 +2,23 @@ package JavaSampleOOP;
 
 public class Tank {
     
-    private Double volumen; // in liter
+    private Double volume; // in liter
     private Double level; // in liter
     private Integer levelPercent; // in percent
 
-    Tank(Double volumen) {
-        this.volumen = volumen;
+    Tank(Double volume) {
+        this.volume = volume;
         this.setLevel(0.0);
     }
-
-    public Boolean refuel(){
-        this.setLevel(this.volumen);
+    
+    public Boolean refuel() {
+        this.setLevel(this.volume);
         return true;
     }
     
     public Boolean refuel(Double liter) {
         Boolean ok = false;
-        if (liter > this.volumen - this.level) {
+        if (liter > this.volume - this.level) {
             /*
             fill up completely
             this.setLevel(this.volumen);
@@ -33,7 +33,7 @@ public class Tank {
     private void setLevel(Double newLevel) {
         this.level = newLevel;
         this.levelPercent = (int) Math.round(
-                100 * (this.level / this.volumen)
+                100 * (this.level / this.volume)
         );
     }
     
@@ -46,7 +46,6 @@ public class Tank {
     }
     
     public Double getVolume() {
-        return this.volumen;
+        return this.volume;
     }
-    
 }
