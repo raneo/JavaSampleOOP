@@ -11,7 +11,7 @@ public class Car {
     private boolean isEngineOn;
     private Tank tank;
     
-    /**
+    /** Dies hier ist ein Text von Bernd Hollermann, 1.12.2020, 19:00
      * constructor
      * @param name
      * @param color
